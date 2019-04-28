@@ -50,5 +50,5 @@ type AwsClient interface {
 
 
 ## See Also
-https://github.com/localstack/localstack
-https://github.com/hixi-hyi/localstack-go
+* https://github.com/localstack/localstack
+* https://github.com/hixi-hyi/localstack-go
