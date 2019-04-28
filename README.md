@@ -3,7 +3,12 @@ The library can switch original aws and localstack.
 
 
 ## Example
-import "github.com/hixi-hyi/aws-client-go/awsclient"
+```
+import (
+    "github.com/hixi-hyi/aws-client-go/awsclient"
+    "github.com/hixi-hyi/localstack-go/localstack"
+	"github.com/aws/aws-sdk-go/aws/session"
+)
 func init() {
     if os.Getenv("AWS_SAM_LOCAL") == "true" {
         awsclient.UseLocalStack(localstack.NewLocalStack())
@@ -14,6 +19,7 @@ func handler() {
     awsclient.APIGateway(sess)
     // awsclient return localstack service if you have already called awsclient.UseLocalStack(). if not awsclient return original aws service.
 }
+```
 
 ## Supported
 ```
