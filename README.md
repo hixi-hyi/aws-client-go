@@ -11,7 +11,7 @@ import (
 )
 func init() {
     if os.Getenv("AWS_SAM_LOCAL") == "true" {
-        awsclient.UseLocalStack(localstack.NewLocalStack())
+        awsclient.UseLocalStack(localstack.New(&localstack.Config{Domain: "localstack"}))
     }
 }
 func handler() {
